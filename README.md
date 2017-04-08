@@ -2,17 +2,15 @@
 
 **clipboard + lorem ipsum**
 
-> The next systemd!   
+> The next systemd!   _- **Linus Stallman**_   
 
-_- Linus Stallman_   
 
-> Makes me rethink everything about the [Unix philosophy](https://en.wikipedia.org/wiki/Chaos_theory)   
 
-_- Dennis **(The Menace)** Ritchie_   
+> Makes me rethink everything about the [Unix philosophy](https://en.wikipedia.org/wiki/Chaos_theory)   _- **Dennis (The Menace) Ritchie**_   
 
-> Latin is the fundamental building block of our language   
 
-_- Ms. Sullivan, (6th Grade Literature)_
+
+> Latin is the fundamental building block of our language    _- **Ms. Sullivan, (6th Grade Literature)**_
    
    
 # Use   
