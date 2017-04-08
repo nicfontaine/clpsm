@@ -10,7 +10,7 @@
 $ clpsm    # 1 paragraph is copied to clipboard, test w/ **ctrl+v** into text editor. nice.
 ```
 
-- Run w/ number arguement. Go as high as you want, it'll just keep repeating 5 paragraphss
+- Run w/ number arguement. Go as high as you want, it'll jloop through 5 paragraphs
 ```bash
 $ clpsm -n 3   # get 3 paragraphs. sweet.
 ```    
