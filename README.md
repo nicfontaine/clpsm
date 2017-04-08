@@ -7,7 +7,7 @@
 
 - Run w/ no arguement.
 ```bash
-$ clpsm    # 1 paragraph is copied to clipboard, test w/ **ctrl+v** into text editor. nice.
+$ clpsm    # 1 paragraph is copied to clipboard, test w/ ctrl+v into text editor. nice.
 ```
 
 - Run w/ number arguement. Go as high as you want, it'll loop through 5 paragraphs
