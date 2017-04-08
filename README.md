@@ -22,8 +22,7 @@ _- **Dennis** (The Menace) **Ritchie**_
 
 _- **Ms. Sullivan**, (6th Grade Literature)_
 <br>   
-<br>   
-   
+<br>
 # Use   
 
 - Run w/ no arguement.
