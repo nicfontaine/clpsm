@@ -1,6 +1,8 @@
 # CLPSM
 
-Clipboard + lorem ipsum   
+Clipboard + lorem ipsum. The greatest tool you always knew you never needed. Cause fuck those shitty monetized sites that take 3 clicks and 700 http requests to get to some text that you copied into a slack snippet back in the Snow Leopard days but never starred.   
+
+Now all of your "rock star" design needs are just a mainline npm speedball away. Just make sure your terminal has the latest version of Bootstrap installed and supports 4k textures. Quick, now `rm -rf` all that shit and install **xclip**; that's all it requires.
    
 <br>
 
