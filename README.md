@@ -61,7 +61,7 @@ $ chmod +x clpsm
 $ bash clpsm -setup
 ```
 
-5. Now you're ready to **petram**.
+5. Now you're ready to [**petram**](https://giphy.com/gifs/3o7ZeHcgOVi36JZtzG/html5).
 
 ---
 
