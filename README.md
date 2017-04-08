@@ -4,13 +4,13 @@
    
 <br>
 
-> The next systemd!    
+> Top notch stuff; it's the next systemd!    
 
 _- **Linus Stallman** (Free Software Lobbyist)_   
 <br>      
    
 
-> Makes me rethink everything about the [Unix philosophy](https://en.wikipedia.org/wiki/Chaos_theory)    
+> Makes me rethink everything I thought I knew about the [Unix philosophy](https://en.wikipedia.org/wiki/Chaos_theory)    
 
 _- **Dennis** (The Menace) **Ritchie**_   
 <br>      
