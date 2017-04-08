@@ -4,15 +4,21 @@
    
 <br>
 
-> The next systemd!   _- **Linus Stallman** (Free Software Lobbyist)_   
+> The next systemd!    
+
+_- **Linus Stallman** (Free Software Lobbyist)_   
 <br>      
    
 
-> Makes me rethink everything about the [Unix philosophy](https://en.wikipedia.org/wiki/Chaos_theory)   _- **Dennis** (The Menace) **Ritchie**_   
+> Makes me rethink everything about the [Unix philosophy](https://en.wikipedia.org/wiki/Chaos_theory)    
+
+_- **Dennis** (The Menace) **Ritchie**_   
 <br>      
    
 
-> Latin is the fundamental building block of our language    _- **Ms. Sullivan**, (6th Grade Literature)_
+> Latin is the fundamental building block of our language     
+
+_- **Ms. Sullivan**, (6th Grade Literature)_
 <br>     
    
 # Use   
