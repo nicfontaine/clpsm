@@ -1,4 +1,4 @@
-# Clpsm
+# clpsm
 
 > copy `n` parapraphs of lorem ipsum to clipboard   
    
@@ -10,7 +10,7 @@
 $ clpsm    # 1 paragraph is copied to clipboard, test w/ **ctrl+v** into text editor. nice.
 ```
 
-- Run w/ number arguement. Go as high as you want, it'll just keep repeating 5 `<p>`'s
+- Run w/ number arguement. Go as high as you want, it'll just keep repeating 5 paragraphss
 ```bash
 $ clpsm -n 3   # get 3 paragraphs. sweet.
 ```    
@@ -20,7 +20,7 @@ $ clpsm -n 3   # get 3 paragraphs. sweet.
 
 ### Setup   
 
-1. **xclip** dependency - install w/ wtvr pkg manager 
+1. **xclip** dependency - install w/ whatever pkg manager.    
 
 2. Clone **clpsm** wherever you want & enter dir.
 ```bash
