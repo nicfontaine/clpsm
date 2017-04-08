@@ -1,9 +1,18 @@
 # CLPSM
 
-> clipboard + lorem ipsum
+**clipboard + lorem ipsum**
+
+> The next systemd!
+_- Linus Stallman_   
+
+> Makes me rethink everything about the [Unix philosophy](https://en.wikipedia.org/wiki/Chaos_theory)
+_- Dennis **(The Menace)** Ritchie_   
+
+> Latin is the fundamental building block of our language
+_- Ms. Sullivan, (6th Grade Literature)_
    
    
-### Use   
+# Use   
 
 - Run w/ no arguement.
 ```bash
@@ -13,12 +22,9 @@ $ clpsm    # 1 paragraph is copied to clipboard, test w/ ctrl+v into text editor
 - Run w/ number arguement. _(Go as high as you want, it'll loop through 5 paragraphs)_
 ```bash
 $ clpsm -n 3   # get 3 paragraphs. sweet.
-```    
+```   
 
----
-
-
-### Setup   
+# Setup   
 
 1. **xclip** dependency - install w/ whatever pkg manager.    
 ```bash
@@ -42,6 +48,7 @@ $ chmod +x clpsm
 $ bash clpsm -setup
 ```
 
+---
 
 ### More
 Check out my website at [nicfontaine.com](https://nicfontaine.com)  
