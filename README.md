@@ -7,12 +7,12 @@
 
 - Run w/ no arguement.
 ```bash
-clpsm    # 1 paragraph is copied to clipboard, test w/ **ctrl+v** into text editor. nice.
+$ clpsm    # 1 paragraph is copied to clipboard, test w/ **ctrl+v** into text editor. nice.
 ```
 
 - Run w/ number arguement. Up to **5**.
 ```bash
-clpsm -n 3   # get 3 paragraphs. sweet.
+$ clpsm -n 3   # get 3 paragraphs. sweet.
 ```    
 
 ---
@@ -24,17 +24,17 @@ clpsm -n 3   # get 3 paragraphs. sweet.
 
 2. Clone **clpsm** wherever you want & enter dir.
 ```bash
-git clone https://github.com/ngpfontaine/clpsm.git && cd clpsm
+$ git clone https://github.com/ngpfontaine/clpsm.git && cd clpsm
 ```
 
 3. Make it executable.
 ```bash
-chmod +x clpsm
+$ chmod +x clpsm
 ```
 
 4. Run setup. a symlink will be created from the cloned location to **/bin/clpsm**.
 ```bash
-bash clpsm -setup
+$ bash clpsm -setup
 ```
 
 
