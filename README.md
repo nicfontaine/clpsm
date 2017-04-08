@@ -1,6 +1,6 @@
 # CLPSM
 
-**clipboard + lorem ipsum**   
+Clipboard + lorem ipsum   
    
 <br>
 
@@ -10,13 +10,13 @@ _- **Linus Stallman** (Free Software Lobbyist)_
 <br>      
    
 
-> Makes me rethink everything I thought I knew about the [Unix philosophy](https://en.wikipedia.org/wiki/Chaos_theory)    
+> Makes me rethink everything I thought I knew about the [Unix Philosophy](https://en.wikipedia.org/wiki/Chaos_theory).    
 
 _- **Dennis** (The Menace) **Ritchie**_   
 <br>      
    
 
-> Latin is the fundamental building block of our language     
+> Latin is the fundamental building block of our language.     
 
 _- **Ms. Sullivan**, (6th Grade Literature)_
 <br>     
@@ -25,12 +25,12 @@ _- **Ms. Sullivan**, (6th Grade Literature)_
 
 - Run w/ no arguement.
 ```bash
-$ clpsm    # 1 paragraph is copied to clipboard, test w/ ctrl+v into text editor. nice.
+$ clpsm    # single paragraph is copied to clipboard, test w/ ctrl+v into text editor. nice.
 ```
 
 - Run w/ number arguement. _(Go as high as you want, it'll loop through 5 paragraphs)_
 ```bash
-$ clpsm -n 3   # get 3 paragraphs. sweet.
+$ clpsm -n 3   # get 3 paragraphs. sweet, look at those line breaks (oof).
 ```   
 
 # Setup   
