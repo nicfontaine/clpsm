@@ -31,15 +31,16 @@ p5="Etiam interdum vulputate facilisis. Pellentesque vel lobortis magna, eu dict
 
 if ! type xclip > /dev/null;
 then
-
-	echo "please install xclip"
+	
+	printf "\033c"
+	echo ">>${bold} ! please install xclip to use${normal}"
 	
 
 elif [[ $1 == "-setup" ]]
 then
 
 	sudo ln -sf $DIR/$scriptName /bin/$scriptName
-	echo ">> nice. make a symlink in /usr/bin. no bash prefix needed now"
+	echo ">> ${bold}nice.${normal} made a symlink in /usr/bin. no bash prefix needed now"
 
 
 # NUMBER ARGUEMENT
@@ -50,18 +51,40 @@ then
 
 	for ((i=1; i <= $2; i++))
 	do
+		
+		# > 5, LOOP BACK THROUGH VARS
+		if (( "$i" > 5));
+		then
 
-		pName="p$i"
+			let mod="$i%5"
+			pName="p$mod"
+
+			# MODULUS 0 SHOULD BE 5
+			if (( "$mod" == 0 ));
+			then
+
+				pName="p5"
+
+			fi
+		# 1-5 LOOP
+		else
+
+			pName="p$i" # MAKE VAR CALL FROM LOOP VAL
+
+		fi
+
+		#echo "$pName"
 		echo "${!pName}" >> clpsm-temp
 		echo \ >> clpsm-temp
 
+
 	done
 
-	xclip -sel c < clpsm-temp
-	echo ">>  clpsm'd ${bold}$2 paragraphs${normal}. yay"	
-	rm clpsm-temp
+	xclip -sel c < clpsm-temp # COPY TO CLIPBOARD
+	echo ">>  clpsm'd ${bold}$2 paragraphs${normal}. sikk"
+	rm clpsm-temp # DEL TEMP FILE
 
-# NO ARGUEMENT, DO 1 <p>
+# NO ARGUEMENT, DO 1 PARAGRAPH
 else
 
 	echo "$p1" > clpsm-temp
