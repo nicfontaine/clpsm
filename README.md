@@ -1,6 +1,6 @@
-# clpsm
+# CLPSM
 
-> CLIPBOARD + LOREM IPSUM
+> clipboard + lorem ipsum
    
    
 ### Use   
