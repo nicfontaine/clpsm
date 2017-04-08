@@ -1,4 +1,4 @@
-# clpsm
+# clpsm (clipboard + lorem ipsum)
 
 > copy `n` parapraphs of lorem ipsum to clipboard   
    
