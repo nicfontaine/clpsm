@@ -20,19 +20,19 @@ clpsm -n 3   // Get 3 paragraphs. sweet.
 
 ### Setup   
 
-- **xclip** dependency - install w/ wtvr pkg manager 
+1. **xclip** dependency - install w/ wtvr pkg manager 
 
-- Clone **clpsm** wherever you want & enter dir.
+2. Clone **clpsm** wherever you want & enter dir.
 ```
 git clone https://github.com/ngpfontaine/clpsm.git && cd clpsm
 ```
 
-- Make it executable.
+3. Make it executable.
 ```
 chmod +x clpsm
 ```
 
-- Run setup. a symlink will be created from the cloned location to **/bin/clpsm**.
+4. Run setup. a symlink will be created from the cloned location to **/bin/clpsm**.
 ```
 bash clpsm -setup
 ```
