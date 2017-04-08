@@ -6,7 +6,7 @@
 
 
 
-> Makes me rethink everything about the [Unix philosophy](https://en.wikipedia.org/wiki/Chaos_theory)   _- **Dennis (The Menace) Ritchie**_   
+> Makes me rethink everything about the [Unix philosophy](https://en.wikipedia.org/wiki/Chaos_theory)   _- **Dennis** (The Menace) **Ritchie**_   
 
 
 
