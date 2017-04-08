@@ -10,7 +10,7 @@
 
 
 
-> Latin is the fundamental building block of our language    _- **Ms. Sullivan, (6th Grade Literature)**_
+> Latin is the fundamental building block of our language    _- **Ms. Sullivan**, (6th Grade Literature)_
    
    
 # Use   
