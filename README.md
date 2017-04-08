@@ -1,6 +1,7 @@
 # Clpsm
 
 > copy `n` parapraphs of lorem ipsum to clipboard   
+   
 
 ### Setup   
 
@@ -21,21 +22,19 @@ bash clpsm -setup
 
 ### Dependency   
 
-- xclip. install w/ wtvr pkg manager   
+- **xclip** - install w/ wtvr pkg manager   
 
 ### Use   
 
-1. Run w/ no arguement.
+- Run w/ no arguement.
 ```
-clpsm
+clpsm    // A paragraph is copied to clipboard, test w/ **ctrl+v** into text editor. nice.
 ```
-1 paragraph is copied to clipboard, test w/ **ctrl+v** into text editor. nice.   
 
 2. Run w/ number arguement. Up to **5**.
 ```
-clpsm -n 3
-```
-Get 3 paragraphs. sweet.   
+clpsm -n 3   // Get 3 paragraphs. sweet.
+``` 
 
 
 ### More
