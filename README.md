@@ -21,6 +21,11 @@ $ clpsm -n 3   # get 3 paragraphs. sweet.
 ### Setup   
 
 1. **xclip** dependency - install w/ whatever pkg manager.    
+```bash
+$ pacman -S xclip
+$ apt install xclip
+etc...
+```
 
 2. Clone **clpsm** wherever you want & enter dir.
 ```bash
