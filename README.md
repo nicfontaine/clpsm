@@ -1,6 +1,6 @@
-# clpsm (clipboard + lorem ipsum)
+# clpsm
 
-> copy `n` parapraphs of lorem ipsum to clipboard   
+> CLIPBOARD + LOREM IPSUM
    
    
 ### Use   
