@@ -62,8 +62,8 @@ $ bash clpsm -setup
 ---
 
 ### More
-Check out my website at [nicfontaine.com](https://nicfontaine.com)  
-Twitter: [@ngpfontaine](https://twitter.com/ngpfontaine)
+website: [nicfontaine.com](https://nicfontaine.com)  
+twitter: [@ngpfontaine](https://twitter.com/ngpfontaine)
 
 ### License
 Use it, break it, complain, wtvr.
