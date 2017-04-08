@@ -35,6 +35,8 @@ $ clpsm    # single paragraph is copied to clipboard, test w/ ctrl+v into text e
 $ clpsm -n 3   # get 3 paragraphs. sweet, look at those line breaks (oof).
 ```   
 
+- That's it   
+
 # Setup   
 
 1. **xclip** dependency - install w/ whatever pkg manager.    
@@ -58,6 +60,8 @@ $ chmod +x clpsm
 ```bash
 $ bash clpsm -setup
 ```
+
+5. Now you're ready to **petram**.
 
 ---
 
