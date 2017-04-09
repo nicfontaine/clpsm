@@ -4,6 +4,7 @@
 # copy some lorem ipsum to clipboard
 # use xclip
 # -n arguement for no. of paragraphs
+
 bold=$(tput bold)
 normal=$(tput sgr0)
 
@@ -29,6 +30,7 @@ p4="Ut pretium elit posuere ex laoreet, in fermentum quam ornare. Aliquam in vol
 
 p5="Etiam interdum vulputate facilisis. Pellentesque vel lobortis magna, eu dictum magna. Curabitur erat justo, rutrum vel feugiat eu, semper eget erat. Cras eget ornare velit. Phasellus vitae diam eget justo dignissim dignissim. Praesent sed rutrum justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam tempus magna vitae pulvinar malesuada. Proin sit amet euismod ipsum, a pharetra massa. Ut massa enim, laoreet facilisis ipsum id, luctus porta justo."
 
+# CHECK IF XCLIP IS INSTALLED
 if ! type xclip > /dev/null;
 then
 	
@@ -36,6 +38,7 @@ then
 	echo ">>${bold} ! please install xclip to use${normal}"
 	
 
+# SETUP
 elif [[ $1 == "-setup" ]]
 then
 
@@ -73,7 +76,6 @@ then
 
 		fi
 
-		#echo "$pName"
 		echo "${!pName}" >> clpsm-temp
 		echo \ >> clpsm-temp
 
