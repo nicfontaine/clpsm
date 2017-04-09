@@ -1,6 +1,6 @@
 # Clipboard + Lorem Ipsum
 
-![clpsm logo](../master/_img/logo-256.png)   
+![clpsm logo](../master/_img/logo-256.svg)   
 <br>
 The greatest tool you _always_ knew you never needed. 'Cause fuck those shitty monetized sites that take 3 clicks and 700 http requests to get to some text that you copied into a _Slack_ snippet back in the _Snow Leopard_ days but never starred.   
 
