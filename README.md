@@ -30,7 +30,7 @@ _- **Ms. Sullivan**, (6th Grade Literature)_
    
 # Use   
 
-- Run w/ no arguement.
+- Run w/ no arguement
 ```bash
 $ clpsm    # single paragraph is copied to clipboard, test w/ ctrl+v into text editor. nice.
 ```
@@ -51,7 +51,7 @@ $ apt install xclip
 etc...
 ```
 
-2. Clone **clpsm** wherever you want & enter dir.
+2. Clone **clpsm** wherever you want & enter dir
 ```bash
 $ git clone https://github.com/ngpfontaine/clpsm.git && cd clpsm
 ```
@@ -61,7 +61,7 @@ $ git clone https://github.com/ngpfontaine/clpsm.git && cd clpsm
 $ chmod +x clpsm
 ```
 
-4. Run setup. a symlink will be created from the cloned location to **/bin/clpsm**.
+4. Run setup. a symlink will be created from the cloned location to **/bin/clpsm**
 ```bash
 $ bash clpsm -setup
 ```
