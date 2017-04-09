@@ -41,7 +41,7 @@ $ clpsm -n 3   # get 3 paragraphs. sweet, look at those line breaks (oof).
 
 # Setup   
 
-1. **xclip** dependency - install w/ whatever pkg manager.    
+1. **xclip** dependency - install w/ whatever pkg manager. (**gnu/linux** only)   
 ```bash
 $ pacman -S xclip
 $ apt install xclip
