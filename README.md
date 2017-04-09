@@ -6,7 +6,7 @@ The greatest tool you _always_ knew you never needed. Cause fuck those shitty mo
 
 Now all of your _"rock star"_ design needs are just a mainline **npm** speedball away. Just make sure your terminal has the latest version of [Bootstrap](https://giphy.com/gifs/tqKjGPAgbNVPq/html5) installed and supports [4k textures](http://media.kotaku.foxtrot.future.net.uk/wp-content/uploads/sites/52/2016/11/ac2.jpg). Quick, now [`rm -rf`](https://giphy.com/gifs/3o8doR2qGIXQDGCVoY/html5) all that shit and install **xclip**; that's all it requires.
    
-![screen recording](../master/_img/clpsm-rec.gif)
+![clpsm logo](../master/_img/logo-256.png)  ![screen recording](../master/_img/clpsm-rec.gif)
 <br>
 
 > Top notch stuff ...it's the next systemd!    
