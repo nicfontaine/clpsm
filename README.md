@@ -4,7 +4,9 @@
 <br>
 The greatest tool you _always_ knew you never needed. Cause fuck those shitty monetized sites that take 3 clicks and 700 http requests to get to some text that you copied into a _Slack_ snippet back in the _Snow Leopard_ days but never starred.   
 
-Now all of your _"rock star"_ design needs are just a mainline **npm** speedball away. Just make sure your terminal has the latest version of [Bootstrap](https://giphy.com/gifs/tqKjGPAgbNVPq/html5) installed and supports [4k textures](http://media.kotaku.foxtrot.future.net.uk/wp-content/uploads/sites/52/2016/11/ac2.jpg). Nah, jk.. it just requires **xclip**.
+Now all of your _"rock star"_ design needs are just a mainline **npm** speedball away. Just make sure your terminal has the latest version of [Bootstrap](https://giphy.com/gifs/tqKjGPAgbNVPq/html5) installed and supports [4k textures](http://media.kotaku.foxtrot.future.net.uk/wp-content/uploads/sites/52/2016/11/ac2.jpg).   
+    
+Nah, jk.. it just requires **xclip**.
    
 ![screen recording](../master/_img/clpsm-rec.gif)
 <br>
