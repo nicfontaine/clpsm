@@ -70,7 +70,7 @@ $ bash clpsm -setup
 
 5. Now you're ready to [**petram**](https://giphy.com/gifs/3o7ZeHcgOVi36JZtzG/html5).   
 
-# NODEJS
+# NODE JS
 
 - to-do
 
