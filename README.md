@@ -28,7 +28,9 @@ _- **Dennis** (The Menace) **Ritchie**_
 _- **Ms. Sullivan**, (6th Grade Literature)_
 <br>   
    
-# Use   
+# BASH   
+
+### Use
 
 - Run w/ no arguement
 ```bash
@@ -42,7 +44,7 @@ $ clpsm -n 3   # get 3 paragraphs. sweet, look at those line breaks (oof).
 
 - That's it   
 
-# Setup   
+### Setup   
 
 1. **xclip** dependency - install w/ whatever pkg manager. (**gnu/linux** only)   
 ```bash
@@ -51,9 +53,9 @@ $ apt install xclip
 etc...
 ```
 
-2. Clone **clpsm** wherever you want & enter dir
+2. Clone **clpsm** wherever you want & enter bash dir
 ```bash
-$ git clone https://github.com/ngpfontaine/clpsm.git && cd clpsm
+$ git clone https://github.com/ngpfontaine/clpsm.git && cd clpsm/bash
 ```
 
 3. Make it executable.
@@ -66,7 +68,11 @@ $ chmod +x clpsm
 $ bash clpsm -setup
 ```
 
-5. Now you're ready to [**petram**](https://giphy.com/gifs/3o7ZeHcgOVi36JZtzG/html5).
+5. Now you're ready to [**petram**](https://giphy.com/gifs/3o7ZeHcgOVi36JZtzG/html5).   
+
+# NODEJS
+
+- to-do
 
 ---
 
