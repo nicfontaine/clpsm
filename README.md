@@ -13,7 +13,12 @@ Nah, jk.. it just requires **xclip**. _sorry mac_ ;(
 
 > Top notch stuff ...it's the next systemd!    
 
-_- **Linus Stallman** (Free Software Lobbyist)_   
+_- **Linus Torval** (Free Software Lobbyist)_   
+<br>      
+
+> Absolutely _not_ proprietary    
+
+_- **Richard Stollnam** (Acronym Wizard)_   
 <br>      
    
 
