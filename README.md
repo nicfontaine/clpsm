@@ -16,7 +16,7 @@ Nah, jk.. it just requires **xclip**. _sorry mac_ ;(
 _- **Linus Torval** (Free Software Lobbyist)_   
 <br>      
 
-> Absolutely _not_ proprietary    
+> Absolutely *not* proprietary    
 
 _- **Richard Stollnam** (Acronym Wizard)_   
 <br>      
