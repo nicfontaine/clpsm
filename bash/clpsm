@@ -39,12 +39,19 @@ then
 	
 
 # SETUP
-elif [[ $1 == "-setup" ]]
+elif [[ $1 == "-setup" ]];
 then
 
 	sudo ln -sf $DIR/$scriptName /bin/$scriptName
 	echo ">> ${bold}nice.${normal} made a symlink in /usr/bin. no bash prefix needed now"
 
+elif [[ $1 == "-help" ]];
+then
+	
+	echo "$ ${bold}clpsm -help${normal}        i think you already know this one.."
+	echo "$ ${bold}clpsm -setup${normal}       run initial setup from clpsm/bash dir"
+	echo "$ ${bold}clpsm${normal}              1 paragraph"
+	echo "$ ${bold}clpsm -n 5${normal}         5 paragraphs"
 
 # NUMBER ARGUEMENT
 elif [[ $1 == "-n" ]];

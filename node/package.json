@@ -1,0 +1,22 @@
+{
+  "name": "clpsm",
+  "version": "1.0.13",
+  "description": "cmd line lorem ipsum utility",
+  "main": "clpsm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngpfontaine/clpsm.git"
+  },
+  "author": "nic fontaine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngpfontaine/clpsm/issues"
+  },
+  "homepage": "https://github.com/ngpfontaine/clpsm/blob/master/README.md",
+  "bin": {
+    "clpsm": "clpsm.js"
+  }
+}
