@@ -48,8 +48,8 @@ then
 elif [[ $1 == "--help" ]];
 then
 	
-	echo "$ ${bold}clpsm --help${normal}        i think you already know this one.."
-	echo "$ ${bold}clpsm --setup${normal}       run initial setup from clpsm/bash dir"
+	echo "$ ${bold}clpsm --help${normal}       i think you already know this one.."
+	echo "$ ${bold}clpsm --setup${normal}      run initial setup from clpsm/bash dir"
 	echo "$ ${bold}clpsm${normal}              1 paragraph"
 	echo "$ ${bold}clpsm -n 5${normal}         5 paragraphs"
 
