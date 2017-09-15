@@ -5,7 +5,8 @@ The greatest tool you _always_ knew you never needed. 'Cause fuck those shitty m
 Now all of your _"rock star"_ design needs are just a mainline **npm/webpack/mongo/MEAN/react** speedball away. Just make sure your terminal is running the latest version of [Bootstrap](https://giphy.com/gifs/tqKjGPAgbNVPq/html5) and supports [4k textures](http://media.kotaku.foxtrot.future.net.uk/wp-content/uploads/sites/52/2016/11/ac2.jpg).   
     
 Nah, jk.. it just:   
-`npm install clpsm`
+`npm install clpsm -g`   
+_(may need `sudo`)_
    
 <br>
 
