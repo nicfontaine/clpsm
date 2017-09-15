@@ -1,6 +1,6 @@
 {
   "name": "clpsm",
-  "version": "1.0.13",
+  "version": "1.0.25",
   "description": "cmd line lorem ipsum utility",
   "main": "clpsm.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/ngpfontaine/clpsm/blob/master/README.md",
   "bin": {
     "clpsm": "clpsm.js"
+  },
+  "dependencies": {
+    "clipboardy": "^1.1.4"
   }
 }
