@@ -37,13 +37,13 @@ _- **Ms. Sullivan**, (6th Grade Literature)_
 
 ```
 clpsm
-├── _img           # logo & screen recordings for readme
+├── _img               # logo & screen recordings for readme
 ├── bash           
-│   └── clpsm      # bash script
-└── node           # node package contents
-    └── clpsm.js   # node script
-		└── package.json
-		└── readme.md  
+│   └── clpsm          # bash script
+└── node
+    └── clpsm.js       # node script
+    └── package.json
+    └── readme.md  
 ```
    
 # USE     
