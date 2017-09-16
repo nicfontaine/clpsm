@@ -32,6 +32,19 @@ _- **Dennis** (The Menace) **Ritchie**_
 
 _- **Ms. Sullivan**, (6th Grade Literature)_
 <br>   
+
+### Repo
+
+```
+clpsm
+├── _img           # logo & screen recordings for readme
+├── bash           
+│   └── clpsm      # bash script
+└── node           # node package contents
+    └── clpsm.js   # node script
+		└── package.json
+		└── readme.md  
+```
    
 # USE     
 
@@ -75,7 +88,10 @@ $ bash clpsm -setup
 
 ### Node JS Setup
 
-- `sudo npm install clpsm -g`   
+1. `sudo npm install clpsm -g`   
+
+[NPM link](https://www.npmjs.com/package/clpsm)
+
 
 ---
 
