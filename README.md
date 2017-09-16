@@ -33,9 +33,7 @@ _- **Dennis** (The Menace) **Ritchie**_
 _- **Ms. Sullivan**, (6th Grade Literature)_
 <br>   
    
-# BASH   
-
-### Use
+# USE     
 
 - Run w/ no arguement
 ```bash
@@ -49,7 +47,7 @@ $ clpsm -n 3   # get 3 paragraphs. sweet, look at those line breaks (oof).
 
 - That's it   
 
-### Setup   
+### Bash Setup   
 
 1. **xclip** dependency - install w/ whatever pkg manager. (**gnu/linux** only)   
 ```bash
@@ -75,9 +73,9 @@ $ bash clpsm -setup
 
 5. Now you're ready to [**petram**](https://giphy.com/gifs/3o7ZeHcgOVi36JZtzG/html5).   
 
-# NODE JS
+### Node JS Setup
 
-- to-do
+- `sudo npm install clpsm -g`   
 
 ---
 
