@@ -13,20 +13,20 @@ Nah, jk.. it just requires **xclip**. _sorry mac_ ;(
 
 > Top notch stuff ...it's the next systemd!    
 
-_- **Linus Torval** (Free Software Lobbyist)_   
+_- **Linus Torvalds** (Free Software Lobbyist)_
 <br>      
 
 > Absolutely **not** proprietary    
 
-_- **Richard Stollnam** (Acronym Wizard)_   
-<br>      
-   
+_- **Richard Stallman** (Acronym Wizard)_
+<br>
+ 
 
 > Makes me rethink everything I thought I knew about the [Unix Philosophy](http://www.cinema52.com/2013/wp-content/uploads/2013/05/MalcolmExperiment2.png).    
 
 _- **Dennis** (The Menace) **Ritchie**_   
 <br>      
-   
+ 
 
 > Latin is the fundamental building block of our language.     
 
