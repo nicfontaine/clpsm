@@ -1,14 +1,38 @@
-# Clipboard + Lorem Ipsum
+<img src="https://nicfontaine.com/dev/clpsm-logo-horizontal.png">
 
+# CLIPBOARD + LOREM IPSUM   
+   
 The greatest tool you _always_ knew you never needed. 'Cause fuck those shitty monetized sites that take 3 clicks and 700 http requests to get to some text that you copied into a _Slack_ snippet back in the _Snow Leopard_ days but never starred.   
 
-Now all of your _"rock star"_ design needs are just a mainline **npm/webpack/mongo/MEAN/react** speedball away. Just make sure your terminal is running the latest version of [Bootstrap](https://giphy.com/gifs/tqKjGPAgbNVPq/html5) and supports [4k textures](http://media.kotaku.foxtrot.future.net.uk/wp-content/uploads/sites/52/2016/11/ac2.jpg).   
+Now all of your _"rock star"_ design needs are just a mainline **npm/webpack/mongo/drungus/react** speedball away. Just make sure your terminal is running the latest version of [Bootstrap](https://giphy.com/gifs/tqKjGPAgbNVPq/html5) and supports [4k textures](http://media.kotaku.foxtrot.future.net.uk/wp-content/uploads/sites/52/2016/11/ac2.jpg).   
     
-Nah, jk.. it just:   
-`npm install clpsm -g`   
-_(may need `sudo`)_
-   
-<br>
+Nah, jk.. it has 1 dependency.
+
+# INSTALL
+
+```bash
+npm install clpsm -g`   # may need sudo
+```   
+
+# USE     
+
+- Run w/ no arguement
+```bash
+$ clpsm    # single paragraph copied to clipboard, paste away
+```
+
+- Run w/ number arguement. _(Go as high as you want, it'll loop through 5 paragraphs)_
+```bash
+$ clpsm -n 3   # 3 paragraphs. sweet, nice line breaks
+```  
+
+- Short paragraphs
+```bash
+$ clpsm -s    # single, shorter paragraph
+$ clpsm -n 4 -s    # same as number arg above, but shorter
+``` 
+
+# COMMUNITY RESPONSE
 
 > Top notch stuff ...it's the next systemd!    
 
@@ -31,12 +55,6 @@ _- **Dennis** (The Menace) **Ritchie**_
 
 _- **Ms. Sullivan**, (6th Grade Literature)_
 <br>  
-
-# How
-
-`clpsm --help`   
-`clpsm`   
-`clpsm -n 8`   
 
 ---
 

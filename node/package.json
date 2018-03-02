@@ -1,6 +1,6 @@
 {
   "name": "clpsm",
-  "version": "1.0.26",
+  "version": "1.0.42",
   "description": "opinionated command line lorem ipsum utility",
   "main": "clpsm.js",
   "scripts": {

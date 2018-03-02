@@ -1,0 +1,20 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'version', '1.0.31' ]
+2 info using npm@3.5.2
+3 info using node@v6.11.4
+4 error version No valid package.json found
+5 verbose stack TypeError: Cannot read property 'toString' of undefined
+5 verbose stack     at stripBOM (/usr/share/npm/lib/utils/parse-json.js:16:20)
+5 verbose stack     at module.exports (/usr/share/npm/lib/utils/parse-json.js:3:21)
+5 verbose stack     at ReadFileContext.<anonymous> (/usr/share/npm/lib/version.js:36:14)
+5 verbose stack     at ReadFileContext.callback (/usr/share/npm/node_modules/graceful-fs/graceful-fs.js:76:16)
+5 verbose stack     at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:367:13)
+6 verbose cwd /home/nic/docs/devnf/clpsm
+7 error Linux 4.13.0-25-generic
+8 error argv "/usr/bin/node" "/usr/bin/npm" "version" "1.0.31"
+9 error node v6.11.4
+10 error npm  v3.5.2
+11 error Cannot read property 'toString' of undefined
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
