@@ -24,7 +24,7 @@ _- **Richard Stollnam** (Acronym Wizard)_
 
 > Makes me rethink everything I thought I knew about the [Unix Philosophy](http://www.cinema52.com/2013/wp-content/uploads/2013/05/MalcolmExperiment2.png).    
 
-_- **Dennis** (The Menace) **Ritchie**_   
+_- **Dennis** (The Menace) **Richie**_   
 <br>      
    
 
@@ -45,53 +45,32 @@ clpsm
     └── package.json
     └── readme.md  
 ```
+
+
+### Node JS Setup
+
+`sudo npm install clpsm -g`   
+
+[npmjs.com/package/clpsm](https://www.npmjs.com/package/clpsm)    
    
 # USE     
 
-- Run w/ no arguement
+- Basic
 ```bash
 $ clpsm    # single paragraph is copied to clipboard, test w/ ctrl+v into text editor. nice.
 ```
 
-- Run w/ number arguement. _(Go as high as you want, it'll loop through 5 paragraphs)_
+- Number arguement. _(Go as high as you want, it'll loop through 5 paragraphs)_
 ```bash
-$ clpsm -n 3   # get 3 paragraphs. sweet, look at those line breaks (oof).
+$ clpsm 3   # get 3 paragraphs. sweet, look at those line breaks (oof).
 ```   
 
-- That's it   
-
-### Bash Setup   
-
-1. **xclip** dependency - install w/ whatever pkg manager. (**gnu/linux** only)   
+- Short paragrahps
 ```bash
-$ pacman -S xclip
-$ apt install xclip
-etc...
-```
+$ clpsm 5 -s   # get 5 short paragraphs. #features
+```   
 
-2. Clone **clpsm** wherever you want & enter bash dir
-```bash
-$ git clone https://github.com/ngpfontaine/clpsm.git && cd clpsm/bash
-```
-
-3. Make it executable.
-```bash
-$ chmod +x clpsm
-```
-
-4. Run setup. a symlink will be created from the cloned location to **/bin/clpsm**
-```bash
-$ bash clpsm -setup
-```
-
-5. Now you're ready to [**petram**](https://giphy.com/gifs/3o7ZeHcgOVi36JZtzG/html5).   
-
-### Node JS Setup
-
-1. `sudo npm install clpsm -g`   
-
-[NPM link](https://www.npmjs.com/package/clpsm)
-
+- That's it      
 
 ---
 
