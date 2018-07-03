@@ -55,22 +55,11 @@ clpsm
    
 # USE     
 
-- Basic
 ```bash
-$ clpsm    # single paragraph is copied to clipboard, test w/ ctrl+v into text editor. nice.
-```
-
-- Number arguement. _(Go as high as you want, it'll loop through 5 paragraphs)_
-```bash
-$ clpsm 3   # get 3 paragraphs. sweet, look at those line breaks (oof).
-```   
-
-- Short paragrahps
-```bash
+$ clpsm        # single paragraph to clipboard. paste into text editor - nice.
+$ clpsm 3      # 3 paragraphs. go as high as you want (loops through 5 infinitely)
 $ clpsm 5 -s   # get 5 short paragraphs. #features
-```   
-
-- That's it      
+```        
 
 ---
 
