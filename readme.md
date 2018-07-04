@@ -6,7 +6,7 @@ The greatest tool you _always_ knew you never needed. 'Cause fuck those shitty m
 
 Now all of your _"rock star"_ design needs are just a mainline **npm** speedball away. Just make sure your terminal is running the latest version of [Bootstrap](https://giphy.com/gifs/tqKjGPAgbNVPq/html5) and supports [4k textures](http://media.kotaku.foxtrot.future.net.uk/wp-content/uploads/sites/52/2016/11/ac2.jpg).   
     
-Nah, jk.. it just requires **xclip**. _sorry mac_ ;(
+Nah, jk.. it just requires **clipboardy**.
    
 ![screen recording](../master/_img/clpsm-rec.gif)
 <br>
@@ -38,12 +38,10 @@ _- **Ms. Sullivan**, (6th Grade Literature)_
 ```
 clpsm
 ├── _img               # logo & screen recordings for readme
-├── bash           
-│   └── clpsm          # bash script
-└── node
-    └── clpsm.js       # node script
-    └── package.json
-    └── readme.md  
+└── clpsm.js       # node script
+└── p.js               # lorem ipsum sources
+└── package.json
+└── readme.md  
 ```
 
 
@@ -56,9 +54,10 @@ clpsm
 # USE     
 
 ```bash
-$ clpsm        # single paragraph to clipboard. paste into text editor - nice.
-$ clpsm 3      # 3 paragraphs. go as high as you want (loops through 5 infinitely)
-$ clpsm 5 -s   # get 5 short paragraphs. #features
+$ clpsm           # single paragraph
+$ clpsm 3         # 3 paragraphs
+$ clpsm 50 -s     # 50 short paragraphs
+$ clpsm 5 -s -p   # 5 short, html tagged paragraphs
 ```        
 
 ---
