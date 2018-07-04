@@ -8,7 +8,7 @@ Now all of your _"rock star"_ design needs are just a mainline **npm** speedball
     
 Nah, jk.. it just uses **clipboardy**.
    
-![screen recording](https://nicfontaine.com/dev/clpsm-rec.gif)
+# ![screen recording](https://nicfontaine.com/dev/clpsm-rec.gif)
 <br>
 
 # Install
