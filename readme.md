@@ -6,18 +6,18 @@ The greatest tool you _always_ knew you never needed. 'Cause fuck those shitty m
 
 Now all of your _"rock star"_ design needs are just a mainline **npm** speedball away. Just make sure your terminal is running the latest version of [Bootstrap](https://giphy.com/gifs/tqKjGPAgbNVPq/html5) and supports [4k textures](http://media.kotaku.foxtrot.future.net.uk/wp-content/uploads/sites/52/2016/11/ac2.jpg).   
     
-Nah, jk.. it just requires **clipboardy**.
+Nah, jk.. it just uses **clipboardy**.
    
 ![screen recording](https://nicfontaine.com/dev/clpsm-rec.gif)
 <br>
 
-## Install
+# Install
 
 `sudo npm install clpsm -g`   
 
 [npmjs.com/package/clpsm](https://www.npmjs.com/package/clpsm)    
    
-## Use
+# Use
 
 ```bash
 $ clpsm           # single paragraph
@@ -26,7 +26,7 @@ $ clpsm 50 -s     # 50 short paragraphs
 $ clpsm 5 -s -p   # 5 short, html tagged paragraphs
 ```  
 
-### Community Response
+# Community Response
 
 > Top notch stuff ...it's the next systemd!    
 
