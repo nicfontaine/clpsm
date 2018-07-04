@@ -1,6 +1,6 @@
 {
   "name": "clpsm",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "description": "Lorem ipsum to clipboard via the command line",
   "main": "clpsm.js",
   "scripts": {
