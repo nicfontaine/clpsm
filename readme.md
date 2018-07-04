@@ -1,6 +1,6 @@
 # Clipboard + Lorem Ipsum
 
-![clpsm logo](../master/_img/clpsm-logo-horizontal.png)   
+![clpsm logo](https://nicfontaine.com/dev/clpsm-logo-horizontal.png)   
 <br>
 The greatest tool you _always_ knew you never needed. 'Cause fuck those shitty monetized sites that take 3 clicks and 700 http requests to get to some text that you copied into a _Slack_ snippet back in the _Snow Leopard_ days but never starred.   
 
@@ -8,8 +8,25 @@ Now all of your _"rock star"_ design needs are just a mainline **npm** speedball
     
 Nah, jk.. it just requires **clipboardy**.
    
-![screen recording](../master/_img/clpsm-rec.gif)
+![screen recording](https://nicfontaine.com/dev/clpsm-rec.gif)
 <br>
+
+## Install
+
+`sudo npm install clpsm -g`   
+
+[npmjs.com/package/clpsm](https://www.npmjs.com/package/clpsm)    
+   
+## Use
+
+```bash
+$ clpsm           # single paragraph
+$ clpsm 3         # 3 paragraphs
+$ clpsm 50 -s     # 50 short paragraphs
+$ clpsm 5 -s -p   # 5 short, html tagged paragraphs
+```  
+
+### Community Response
 
 > Top notch stuff ...it's the next systemd!    
 
@@ -32,33 +49,6 @@ _- **Dennis** (The Menace) **Richie**_
 
 _- **Ms. Sullivan**, (6th Grade Literature)_
 <br>   
-
-### Repo
-
-```
-clpsm
-├── _img               # logo & screen recordings for readme
-└── clpsm.js       # node script
-└── p.js               # lorem ipsum sources
-└── package.json
-└── readme.md  
-```
-
-
-### Node JS Setup
-
-`sudo npm install clpsm -g`   
-
-[npmjs.com/package/clpsm](https://www.npmjs.com/package/clpsm)    
-   
-# USE     
-
-```bash
-$ clpsm           # single paragraph
-$ clpsm 3         # 3 paragraphs
-$ clpsm 50 -s     # 50 short paragraphs
-$ clpsm 5 -s -p   # 5 short, html tagged paragraphs
-```        
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "name": "clpsm",
-  "version": "1.0.42",
-  "description": "opinionated command line lorem ipsum utility",
+  "version": "1.1.0",
+  "description": "Lorem ipsum to clipboard via the command line",
   "main": "clpsm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
