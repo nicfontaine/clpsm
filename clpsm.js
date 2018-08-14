@@ -1,5 +1,11 @@
 #! /usr/bin/env node
-'use strict'
+(function(){"use strict"})()
+/*
+Loop
+	save flags
+	set source
+Create output
+*/
 const clip = require('clipboardy')
 // Lorem ispum files
 const sourceP = require("./p.js")
@@ -32,7 +38,8 @@ var out = {
 // Save argument info
 var ar = {
 	l: process.argv.length,
-	all: []
+	all: [],
+	flags: {} // Will hold flags for -s -p
 };
 
 //
@@ -41,20 +48,25 @@ var ar = {
 
 (function() {
 
-	// Loop first through all arguments to log
-	// Look for -s flag
+	ar.flags = {} // Reset
+	
 	for (let i=0; i<ar.l; i++) {
 		ar.all.push(process.argv[i])
 		// Short flag. Source short paragraphs
 		if (process.argv[i] == "-s") {
+			ar.flags.short = true
 			out.pSource = text.ps
 			out.short = "short "
 		}
 		// Parapraph tag flag. Surround paragraphs in html tags
 		if (process.argv[i] == "-p") {
+			ar.flags.tag = true
 			out.tagged = "tagged "
 			out.pPre = "<p>"
 			out.pPost = "</p>"
+		}
+		if (process.argv[i] == "--help") {
+			ar.flags.help = true
 		}
 	}
 
@@ -63,66 +75,65 @@ var ar = {
 		out.clip = text.p[0]
 		out.console = '>> clpsm\'d 1 paragraph. ' + text.wot[text.genWot()]
 	}
+	else if (ar.flags.help) {
+		out.console = text.help
+		console.log(out.console)
+	}
 	// Arguments
 	else {
+
+		if (ar.l < 4) {
+			if (ar.flags.short) {
+				out.console = ">> clpsm\'d 1 short paragraph"
+				out.clip = out.pSource[0]
+			}
+			if (ar.flags.tag) {
+				out.console = ">> clpsm\'d 1 tagged paragraph"
+				out.clip += out.pPre + out.pSource[0] + out.pPost
+			}
+		}
+
 		// Loop again to execute, skip first 2
 		for (let j=2; j<ar.all.length; j++) {
 			// Hold arg we're interested in
 			var x = ar.all[j]
 
-			// Help
-			if (x === '--help') {
-				out.console = text.help
-				console.log(out.console)
-			}
-			// Short
-			else if (x == "-s") {
-				// No other args
-				if (ar.l < 4) {
-					out.console = ">> clpsm\'d 1 short paragraph"
-					out.clip = out.pSource[0]
+			if (typeof x === 'number' || !isNaN(x)) {
+				if (x < 0) {
+					out.console = 'soo.. you want to, remove items, from your clipboard..  what?'
 				}
-			}
-			else {
-
-				if (typeof x === 'number' || !isNaN(x)) {
-					if (x < 0) {
-						out.console = 'soo.. you want to, remove items, from your clipboard..  what?'
-					}
-					else if (x == 0) {
-						out.console = 'great! nothing happened, sooo glad clpsm could help..'
-					}
-					// Regular numbers
-					else {
-						// Loop for paragraph arrays
-						for (let k=0; k<x; k++) {
-							// No line break on last paragraph
-							if (k == (x-1)) {
-								// Reset to 0 index if greater than array length
-								let pInd = k > out.pSource.length-1 ? k%5 : k
-								out.clip += out.pPre + out.pSource[pInd] + out.pPost
-							}
-							// All other parapraphs
-							else {
-								let pInd = k > out.pSource.length-1 ? k%5 : k
-								out.clip += out.pPre + out.pSource[pInd] + out.pPost + "\n\n"
-							}
+				else if (x == 0) {
+					out.console = 'great! nothing happened, sooo glad clpsm could help..'
+				}
+				// Regular numbers
+				else {
+					// Loop for paragraph arrays
+					for (let k=0; k<x; k++) {
+						// No line break on last paragraph
+						if (k == (x-1)) {
+							// Reset to 0 index if greater than array length
+							let pInd = k > out.pSource.length-1 ? k%5 : k
+							out.clip += out.pPre + out.pSource[pInd] + out.pPost
 						}
-
-						// Copy to clipboard
-						let strP = x==1 ? "paragraph" : "paragraphs"
-
-						out.console = ">> clpsm\'d " + x + " " + out.short + out.tagged + strP + ". " + text.wot[text.genWot()]
+						// All other parapraphs
+						else {
+							let pInd = k > out.pSource.length-1 ? k%5 : k
+							out.clip += out.pPre + out.pSource[pInd] + out.pPost + "\n\n"
+						}
 					}
+
+					// Copy to clipboard
+					let strP = x==1 ? "paragraph" : "paragraphs"
+
+					out.console = ">> clpsm\'d " + x + " " + out.short + out.tagged + strP + ". " + text.wot[text.genWot()]
 				}
+			}
 				// Not recognized command or number
 				else {
 					// Add erroroneous arg to holder
 					out.error.push(x)
 				}
-
-			}
-			
+		
 		}
 	}
 
