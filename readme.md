@@ -24,12 +24,15 @@ $ clpsm 5 -s -p         # 5 short, html tagged paragraphs
 
 # Use As Module
 
-```javascript
+```bash
 npm i clpsm --save                 // Install
+```   
+
+```javascript
 const clpsm = require("clpsm")     // Require
 
-clpsm(2,["p"]).then( val => {
-    console.log(val)
+clpsm(2,["p"]).then( text => {
+    console.log(text)
   }, err => {
     console.log(err)
   })
