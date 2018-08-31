@@ -38,6 +38,8 @@ clpsm(2,["p"]).then( val => {
   }, err => {
     console.log(err)
   })
+
+// 2, html tagged paragraphs will be logged to console...
 ```
 
 # Community Response
