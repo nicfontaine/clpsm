@@ -34,10 +34,10 @@ npm i clpsm --save                 // Install
 const clpsm = require("clpsm")     // Require
 
 clpsm(2,["p"]).then( val => {
-		console.log(val)
-	}, err => {
-		console.log(err)
-	})
+    console.log(val)
+  }, err => {
+    console.log(err)
+  })
 ```
 
 # Community Response
