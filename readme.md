@@ -8,20 +8,37 @@ Now all of your _"rock star"_ design needs are just a mainline **npm** speedball
     
 Nah, jk.. it just uses **clipboardy**.   
 
-# Install
-
-`sudo npm install clpsm -g`   
+# NPM
 
 [npmjs.com/package/clpsm](https://www.npmjs.com/package/clpsm)    
    
-# Use
+# Use In Console
 
 ```bash
-$ clpsm           # single paragraph
-$ clpsm 3         # 3 paragraphs
-$ clpsm 50 -s     # 50 short paragraphs
-$ clpsm 5 -s -p   # 5 short, html tagged paragraphs
+$ sudo npm i clpsm -g   # Install
+$ clpsm                 # single paragraph
+$ clpsm 3               # 3 paragraphs
+$ clpsm 50 -s           # 50 short paragraphs
+$ clpsm 5 -s -p         # 5 short, html tagged paragraphs
 ```  
+
+# Use As Module
+
+- Returns a promise with Lorem Ipsum
+- Takes arguments `(Number, ["s","p"])`   
+	- `Number` is paragraph length
+	- `[]` can contain flags for `s` short, or `p` html tagged paragraphs
+
+```javascript
+npm i clpsm --save                 // Install
+const clpsm = require("clpsm")     // Require
+
+clpsm(2,["p"]).then( val => {
+		console.log(val)
+	}, err => {
+		console.log(err)
+	})
+```
 
 # Community Response
 
@@ -44,7 +61,7 @@ _- **Dennis** (The Menace) **Richie**_
 
 > Latin is the fundamental building block of our language.     
 
-_- **Ms. Sullivan**, (6th Grade Literature)_
+_- **Mrs. Sullivan**, (6th Grade Literature)_
 <br>   
 
 ---
@@ -54,4 +71,4 @@ website: [nicfontaine.com](https://nicfontaine.com)
 twitter: [@ngpfontaine](https://twitter.com/ngpfontaine)
 
 ### License
-Use it, break it, complain, wtvr.
+Buy it, break it, trash it, trash it, change it, mail, upgrade it.

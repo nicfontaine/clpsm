@@ -1,159 +1,148 @@
 #! /usr/bin/env node
 (function(){"use strict"})()
+
 /*
-Loop
-	save flags
-	set source
-Create output
+(Note) Add decription...
 */
-const clip = require('clipboardy')
-// Lorem ispum files
-const sourceP = require("./p.js")
 
-var text = {
-	help: "TRY:\n" +
-		"$ clpsm             # 1 paragraph\n" +
-		"$ clpsm 5           # 5 paragraphs\n" +
-		"$ clpsm 3 -s        # 3 short paragraphs\n" +
-		"$ clpsm 2 -s -p     # 2 short html tagged paragraphs",
-	wot: ['sikk','yayy','yas queen','ah-fucking-mazing'],
-	genWot: function() {  // Create stupid success message
-		return Math.floor(Math.random() * this.wot.length)
-	},
-	p: sourceP.content.regular,
-	ps: sourceP.content.short
+const clipboardy = require('clipboardy')
+const lorem = require("./p.js") // Lorem ispum text
+
+var clpsm = function (plen, flags = []) {
+
+	return new Promise((resolve, reject) => {
+
+		// Create stupid success message
+		var wot = {
+			txt: ['sikk','yayy','yas queen','ah-fucking-mazing'],
+			gen: function() { return Math.floor(Math.random() * this.txt.length) }
+		}
+
+		var out = {
+			clip: "", // Hold clipboard output
+			console: "", // Hold console out.console
+			lorem: lorem.content.regular, // Hold source of clipboard output text. REGULAR by default, initial loop will update to SHORT if -s is found
+			short: "", // String to add to console output if short
+			tagged: "", // String to add to console output if tagged
+			pPre: "", // Text to go before each p. For <p> tags
+			pPost: "" // Text to go after each p. For <p> tags
+		}
+
+		// Set source & console strings from flags
+		if (flags.length) {
+			if (flags.indexOf("s") > -1) {
+				out.lorem = lorem.content.short
+				out.short = "short "
+			}
+			if (flags.indexOf("p") > -1) {
+				out.tagged = "tagged "
+				out.pPre = "<p>"
+				out.pPost = "</p>"
+			}
+		}
+
+		// plen not a number
+		if (typeof plen !== "number" || isNaN(plen)) {
+			let msg = "[ERROR] oops, clpsm() takes a number as the first argument"
+			reject(msg)
+		}
+		// plen 0 or less
+		else if (plen < 1) {
+			let msg = "[ERROR] oops, number argument must be >= 1"
+			reject(msg)
+		}
+		// plen valid number
+		else {
+			// Loop & create lorem ipsum output
+			for (let k=0; k < plen; k++) {
+				// No line break on last paragraph
+				if (k == (plen-1)) {
+					// Reset to 0 index if greater than array length
+					let pInd = k > out.lorem.length-1 ? k%5 : k
+					out.clip += out.pPre + out.lorem[pInd] + out.pPost
+				}
+				// All other parapraphs
+				else {
+					let pInd = k > out.lorem.length-1 ? k%5 : k
+					out.clip += out.pPre + out.lorem[pInd] + out.pPost + "\n\n"
+				}
+			}
+
+			// Create console msg from args
+			let strP = plen==1 ? "paragraph" : "paragraphs"
+			out.console = ">> clpsm\'d " + plen + " " + out.short + out.tagged + strP + ". " + wot.txt[wot.gen()]
+
+		}
+
+		// Direct call from Command line. Copy to clipboard & output success console message
+		if (require.main === module) {
+			clipboardy.write(out.clip)
+				.then(res => {
+					if (out.console.length > 1)
+						resolve(out.console)
+					resolve()
+				})
+				.catch( err => {
+					reject("[CLIPBOARD ERR] " + err)
+				})
+		}
+		// Clpsm used as module. resolve output
+		else {
+			resolve(out.clip)
+		}
+
+	})
+
 }
 
-var out = {
-	clip: "", // Hold clipboard output
-	console: "", // Hold console out.console
-	pSource: text.p, // Hold source of clipboard output text. text.p by default, initial loop will update to text.ps if -s is found
-	short: "", // String to add to console output if short
-	error: [], // Will hold an erroneous argument
-	tagged: "", // Srting to add to console output if tagged
-	pPre: "", // Text to go before each p. For <p> tags
-	pPost: "" // Text to go after each p. For <p> tags
-}
+// Called directly, parse args
+if (require.main === module) {
 
-// Save argument info
-var ar = {
-	l: process.argv.length,
-	all: [],
-	flags: {} // Will hold flags for -s -p
-};
-
-//
-// Logic
-//
-
-(function() {
-
-	ar.flags = {} // Reset
+	let flags = [] // Hold all flags as strings
+	let plen = 1 // Number argument, for paragraph length
+	let argv = process.argv
+	let l = argv.length
+	let i = 2 // Loop index number
+	let err = [] // Hold erroneous commands. Return if found, skipping clpsm()
 	
-	for (let i=0; i<ar.l; i++) {
-		ar.all.push(process.argv[i])
+	for (i; i < l; i++) {
+		let ar = argv[i]
+		// Number for paragraph length
+		if (typeof ar === "number" || !isNaN(ar)) {
+			if (ar > 0) {
+				plen = Number(ar)
+			}
+		}
 		// Short flag. Source short paragraphs
-		if (process.argv[i] == "-s") {
-			ar.flags.short = true
-			out.pSource = text.ps
-			out.short = "short "
+		else if (ar == "-s") {
+			flags.push("s")
 		}
 		// Parapraph tag flag. Surround paragraphs in html tags
-		if (process.argv[i] == "-p") {
-			ar.flags.tag = true
-			out.tagged = "tagged "
-			out.pPre = "<p>"
-			out.pPost = "</p>"
+		else if (ar == "-p") {
+			flags.push("p")
 		}
-		if (process.argv[i] == "--help") {
-			ar.flags.help = true
+		// Unrecognized command
+		else {
+			err.push("unrecognized command: " + ar)
 		}
 	}
 
-	// No arguments, just basic clpsm call
-	if (ar.l < 3) {
-		out.clip = text.p[0]
-		out.console = '>> clpsm\'d 1 paragraph. ' + text.wot[text.genWot()]
-	}
-	else if (ar.flags.help) {
-		out.console = text.help
-		console.log(out.console)
-	}
-	// Arguments
-	else {
-
-		if (ar.l < 4) {
-			if (ar.flags.short) {
-				out.console = ">> clpsm\'d 1 short paragraph"
-				out.clip = out.pSource[0]
-			}
-			if (ar.flags.tag) {
-				out.console = ">> clpsm\'d 1 tagged paragraph"
-				out.clip += out.pPre + out.pSource[0] + out.pPost
-			}
+	// Error from initial parsing
+	if (err.length) {
+		for (let i=0; i < err.length; i++) {
+			console.log("[ERROR] " + err[i])
 		}
-
-		// Loop again to execute, skip first 2
-		for (let j=2; j<ar.all.length; j++) {
-			// Hold arg we're interested in
-			var x = ar.all[j]
-
-			if (typeof x === 'number' || !isNaN(x)) {
-				if (x < 0) {
-					out.console = 'soo.. you want to, remove items, from your clipboard..  what?'
-				}
-				else if (x == 0) {
-					out.console = 'great! nothing happened, sooo glad clpsm could help..'
-				}
-				// Regular numbers
-				else {
-					// Loop for paragraph arrays
-					for (let k=0; k<x; k++) {
-						// No line break on last paragraph
-						if (k == (x-1)) {
-							// Reset to 0 index if greater than array length
-							let pInd = k > out.pSource.length-1 ? k%5 : k
-							out.clip += out.pPre + out.pSource[pInd] + out.pPost
-						}
-						// All other parapraphs
-						else {
-							let pInd = k > out.pSource.length-1 ? k%5 : k
-							out.clip += out.pPre + out.pSource[pInd] + out.pPost + "\n\n"
-						}
-					}
-
-					// Copy to clipboard
-					let strP = x==1 ? "paragraph" : "paragraphs"
-
-					out.console = ">> clpsm\'d " + x + " " + out.short + out.tagged + strP + ". " + text.wot[text.genWot()]
-				}
-			}
-				// Not recognized command or number
-				else {
-					// Add erroroneous arg to holder
-					out.error.push(x)
-				}
-		
-		}
+		return
 	}
 
-	// Clpsm success output
-	if (out.clip.length) {
-		clip.write(out.clip)
-		// Console output
-		if (out.console.length > 1) {
-			console.log(out.console)
-		}
-	}
-	// Error output
-	else if (out.error.length) {
-		let e = ""
-		for (var i=0; i<out.error.length; i++) {
-			e += out.error[i] + " "
-		}
-		out.console = ">> clpsm command(s) not recognized: " + e + "\n\n" +
-			"maybe try:\n$ clpsm --help"
-		console.log(out.console)
-	}
+	// Send args to clpsm()
+	clpsm(plen, flags)
+		.then(res => {
+			console.log("res " + res)
+		}, err => {
+			console.log(err)
+		})
 
-})()
+}
+
+module.exports = clpsm
