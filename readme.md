@@ -12,22 +12,17 @@ Nah, jk.. it just uses **clipboardy**.
 
 [npmjs.com/package/clpsm](https://www.npmjs.com/package/clpsm)    
    
-# Use In Console
+# Use As Console > Clipboard
 
 ```bash
 $ sudo npm i clpsm -g   # Install
-$ clpsm                 # single paragraph
+$ clpsm                 # Single paragraph
 $ clpsm 3               # 3 paragraphs
 $ clpsm 50 -s           # 50 short paragraphs
 $ clpsm 5 -s -p         # 5 short, html tagged paragraphs
 ```  
 
 # Use As Module
-
-- Returns a promise with Lorem Ipsum
-- Takes arguments `(Number, ["s","p"])`   
-	- `Number` is paragraph length
-	- `[]` can contain flags for `s` short, or `p` html tagged paragraphs
 
 ```javascript
 npm i clpsm --save                 // Install
@@ -39,8 +34,14 @@ clpsm(2,["p"]).then( val => {
     console.log(err)
   })
 
-// 2, html tagged paragraphs will be logged to console...
+// 2 html tagged paragraphs will be logged to console...
 ```
+
+- Returns a promise with _Lorem Ipsum_ text
+- Takes arguments: `(Number, ["s","p"])`   
+	- `Number` is paragraph length
+	- `[]` can contain flags for `s` short, or `p` html tagged paragraphs
+	- Can also be called with no args, or just a Number
 
 # Community Response
 

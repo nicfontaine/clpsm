@@ -21,11 +21,12 @@ var clpsm = function (plen, flags = []) {
 		var out = {
 			clip: "", // Hold clipboard output
 			console: "", // Hold console out.console
-			lorem: lorem.content.regular, // Hold source of clipboard output text. REGULAR by default, initial loop will update to SHORT if -s is found
+			lorem: lorem.content.short, // Hold source of clipboard output text. REGULAR by default, initial loop will update to SHORT if -s is found
 			short: "", // String to add to console output if short
 			tagged: "", // String to add to console output if tagged
 			pPre: "", // Text to go before each p. For <p> tags
-			pPost: "" // Text to go after each p. For <p> tags
+			pPost: "", // Text to go after each p. For <p> tags
+			lineEnd: "\n\n" // Carriage return for formatting. Store here in case I wanna remove
 		}
 
 		// Set source & console strings from flags
@@ -41,8 +42,14 @@ var clpsm = function (plen, flags = []) {
 			}
 		}
 
+		// No args, just handle as 1
+		if (plen === undefined && flags.length === 0) {
+			plen = 1
+			out.clip = out.lorem[Math.floor(Math.random() * out.lorem.length)] + out.lineEnd
+			out.console = ">> clpsm\'d 1 paragraph. " + wot.txt[wot.gen()]
+		}
 		// plen not a number
-		if (typeof plen !== "number" || isNaN(plen)) {
+		else if (typeof plen !== "number" || isNaN(plen)) {
 			let msg = "[ERROR] oops, clpsm() takes a number as the first argument"
 			reject(msg)
 		}
@@ -64,7 +71,7 @@ var clpsm = function (plen, flags = []) {
 				// All other parapraphs
 				else {
 					let pInd = k > out.lorem.length-1 ? k%5 : k
-					out.clip += out.pPre + out.lorem[pInd] + out.pPost + "\n\n"
+					out.clip += out.pPre + out.lorem[pInd] + out.pPost + out.lineEnd
 				}
 			}
 
@@ -99,7 +106,7 @@ var clpsm = function (plen, flags = []) {
 if (require.main === module) {
 
 	let flags = [] // Hold all flags as strings
-	let plen = 1 // Number argument, for paragraph length
+	let plen = undefined // Number argument, for paragraph length
 	let argv = process.argv
 	let l = argv.length
 	let i = 2 // Loop index number
@@ -138,7 +145,7 @@ if (require.main === module) {
 	// Send args to clpsm()
 	clpsm(plen, flags)
 		.then(res => {
-			console.log("res " + res)
+			console.log(res)
 		}, err => {
 			console.log(err)
 		})
