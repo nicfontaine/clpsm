@@ -25,7 +25,7 @@ $ clpsm 5 -s -p         # 5 short, html tagged paragraphs
 # Use As Module
 
 ```bash
-$ npm i clpsm --save                #  Install
+$ npm i clpsm --save                # Install
 ```   
 
 ```javascript
