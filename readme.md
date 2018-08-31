@@ -44,7 +44,7 @@ clpsm(2,["p"]).then( text => {
 - Takes arguments: `(Number, ["s","p"])`   
 	- `Number` is paragraph length
 	- `[]` can contain flags for `s` short, or `p` html tagged paragraphs
-	- Can also be called with no args, or just a Number
+	- Can also be called with no args `clpsm()`, or just a Number `clpsm(200)`
 
 # Community Response
 
