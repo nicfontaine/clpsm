@@ -7,6 +7,7 @@
 
 const clipboardy = require('clipboardy')
 const lorem = require("./p.js") // Lorem ispum text
+const version = "1.1.3"
 
 var clpsm = function (plen, flags = []) {
 
@@ -111,11 +112,24 @@ if (require.main === module) {
 	let l = argv.length
 	let i = 2 // Loop index number
 	let err = [] // Hold erroneous commands. Return if found, skipping clpsm()
+	let helpText = "CLPSM Commands:\n\n" +
+		"$ clpsm              # Single paragraph" + "\n" +
+		"$ clpsm 3            # 3 paragraphs" + "\n" +
+		"$ clpsm 50 -s        # 50 short paragraphs" + "\n" +
+		"$ clpsm 5 -s -p      # 5 short, html tagged paragraphs" + "\n"
 	
 	for (i; i < l; i++) {
 		let ar = argv[i]
+		// Help
+		if (ar === "--help" || ar === "-h") {
+			return console.log(helpText)
+		}
+		// Version
+		else if (ar === "--version" || ar === "-v") {
+			return console.log("CLPSM " + version)
+		}
 		// Number for paragraph length
-		if (typeof ar === "number" || !isNaN(ar)) {
+		else if (typeof ar === "number" || !isNaN(ar)) {
 			if (ar > 0) {
 				plen = Number(ar)
 			}
