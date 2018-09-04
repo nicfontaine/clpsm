@@ -59,7 +59,7 @@ _- **Richard Stollnam** (Acronym Wizard)_
 <br>      
    
 
-> Makes me rethink everything I thought I knew about the [Unix Philosophy](http://www.cinema52.com/2013/wp-content/uploads/2013/05/MalcolmExperiment2.png).    
+> Makes me rethink everything I thought I knew about the Unix Philosophy.    
 
 _- **Dennis** (The Menace) **Richie**_   
 <br>      
@@ -77,4 +77,4 @@ website: [nicfontaine.com](https://nicfontaine.com)
 twitter: [@ngpfontaine](https://twitter.com/ngpfontaine)
 
 ### License
-Buy it, break it, trash it, trash it, change it, mail, upgrade it.
+Buy it, use it, break it, fix it, trash it, change it, mail, upgrade it.
