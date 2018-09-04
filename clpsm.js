@@ -7,7 +7,7 @@
 
 const clipboardy = require('clipboardy')
 const lorem = require("./p.js") // Lorem ispum text
-const version = "1.1.3"
+const version = "1.2.4"
 
 var clpsm = function (plen, flags = []) {
 
