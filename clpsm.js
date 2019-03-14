@@ -22,8 +22,8 @@ var clpsm = function (plen, flags = []) {
 		var out = {
 			clip: "", // Hold clipboard output
 			console: "", // Hold console out.console
-			lorem: lorem.content.short, // Hold source of clipboard output text. REGULAR by default, initial loop will update to SHORT if -s is found
-			short: "", // String to add to console output if short
+			lorem: lorem.content.medium, // Hold source of clipboard output text. MEDIUM by default, initial loop will update to SHORT if -s is found
+			len: "", // String to add to console output if short
 			tagged: "", // String to add to console output if tagged
 			pPre: "", // Text to go before each p. For <p> tags
 			pPost: "", // Text to go after each p. For <p> tags
@@ -34,7 +34,11 @@ var clpsm = function (plen, flags = []) {
 		if (flags.length) {
 			if (flags.indexOf("s") > -1) {
 				out.lorem = lorem.content.short
-				out.short = "short "
+				out.len = "short "
+			}
+			if (flags.indexOf("l") > -1) {
+				out.lorem = lorem.content.long
+				out.len = "long "
 			}
 			if (flags.indexOf("p") > -1) {
 				out.tagged = "tagged "
@@ -46,7 +50,7 @@ var clpsm = function (plen, flags = []) {
 		// No args, just handle as 1
 		if (plen === undefined && flags.length === 0) {
 			plen = 1
-			out.clip = out.lorem[Math.floor(Math.random() * out.lorem.length)] + out.lineEnd
+			out.clip = out.lorem[Math.floor(Math.random() * out.lorem.length)]
 			out.console = ">> clpsm\'d 1 paragraph. " + wot.txt[wot.gen()]
 		}
 		// plen not a number
@@ -78,7 +82,7 @@ var clpsm = function (plen, flags = []) {
 
 			// Create console msg from args
 			let strP = plen==1 ? "paragraph" : "paragraphs"
-			out.console = ">> clpsm\'d " + plen + " " + out.short + out.tagged + strP + ". " + wot.txt[wot.gen()]
+			out.console = ">> clpsm\'d " + plen + " " + out.len + out.tagged + strP + ". " + wot.txt[wot.gen()]
 
 		}
 
@@ -107,7 +111,7 @@ var clpsm = function (plen, flags = []) {
 if (require.main === module) {
 
 	let flags = [] // Hold all flags as strings
-	let plen = undefined // Number argument, for paragraph length
+	let plen = 1 // Number argument, for paragraph length
 	let argv = process.argv
 	let l = argv.length
 	let i = 2 // Loop index number
@@ -118,6 +122,7 @@ if (require.main === module) {
 		"$ clpsm 50 -s        # 50 short paragraphs" + "\n" +
 		"$ clpsm 5 -s -p      # 5 short, html tagged paragraphs" + "\n"
 	
+	// Check arguments
 	for (i; i < l; i++) {
 		let ar = argv[i]
 		// Help
@@ -137,6 +142,10 @@ if (require.main === module) {
 		// Short flag. Source short paragraphs
 		else if (ar == "-s") {
 			flags.push("s")
+		}
+		// Short flag. Source long paragraphs
+		else if (ar == "-l") {
+			flags.push("l")
 		}
 		// Parapraph tag flag. Surround paragraphs in html tags
 		else if (ar == "-p") {
