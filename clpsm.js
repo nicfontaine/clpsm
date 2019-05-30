@@ -15,7 +15,7 @@ var clpsm = function (plen, flags = []) {
 
 		// Create stupid success message
 		var wot = {
-			txt: ['sikk','yayy','yas queen','ah-fucking-mazing'],
+			txt: ["sikk","yayy","boom","well played!", "EZ"],
 			gen: function() { return Math.floor(Math.random() * this.txt.length) }
 		}
 
@@ -62,6 +62,11 @@ var clpsm = function (plen, flags = []) {
 		else if (plen < 1) {
 			let msg = "[ERROR] oops, number argument must be >= 1"
 			reject(msg)
+		}
+		// plen greater than 100
+		else if (plen > 100) {
+			let msg = "[WARNING] that\'s a lot of lorem ipsum... just capping it at 100"
+			plen = 100
 		}
 		// plen valid number
 		else {
@@ -111,7 +116,7 @@ var clpsm = function (plen, flags = []) {
 if (require.main === module) {
 
 	let flags = [] // Hold all flags as strings
-	let plen = 1 // Number argument, for paragraph length
+	let plen = undefined // Number argument, for paragraph length
 	let argv = process.argv
 	let l = argv.length
 	let i = 2 // Loop index number
