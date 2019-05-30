@@ -48,10 +48,9 @@ var clpsm = function (plen, flags = []) {
 		}
 
 		// No args, just handle as 1
-		if (plen === undefined && flags.length === 0) {
+		if (plen === 1) {
 			plen = 1
-			out.clip = out.lorem[Math.floor(Math.random() * out.lorem.length)]
-			out.console = ">> clpsm\'d 1 paragraph. " + wot.txt[wot.gen()]
+			out.clip = out.pPre + out.lorem[Math.floor(Math.random() * out.lorem.length)] + out.pPost
 		}
 		// plen not a number
 		else if (typeof plen !== "number" || isNaN(plen)) {
@@ -65,7 +64,7 @@ var clpsm = function (plen, flags = []) {
 		}
 		// plen greater than 100
 		else if (plen > 100) {
-			let msg = "[WARNING] that\'s a lot of lorem ipsum... just capping it at 100"
+			// let msg = "[WARNING] that\'s a lot of lorem ipsum... just capping it at 100"
 			plen = 100
 		}
 		// plen valid number
@@ -85,11 +84,11 @@ var clpsm = function (plen, flags = []) {
 				}
 			}
 
-			// Create console msg from args
-			let strP = plen==1 ? "paragraph" : "paragraphs"
-			out.console = ">> clpsm\'d " + plen + " " + out.len + out.tagged + strP + ". " + wot.txt[wot.gen()]
-
 		}
+
+		// Create console msg from args
+		let strP = plen==1 ? "paragraph" : "paragraphs"
+		out.console = ">> clpsm\'d " + plen + " " + out.len + out.tagged + strP + ". " + wot.txt[wot.gen()]
 
 		// Direct call from Command line. Copy to clipboard & output success console message
 		if (require.main === module) {
@@ -116,7 +115,7 @@ var clpsm = function (plen, flags = []) {
 if (require.main === module) {
 
 	let flags = [] // Hold all flags as strings
-	let plen = undefined // Number argument, for paragraph length
+	let plen = 1 // Number argument, for paragraph length
 	let argv = process.argv
 	let l = argv.length
 	let i = 2 // Loop index number
