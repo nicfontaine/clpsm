@@ -7,7 +7,7 @@
 
 const clipboardy = require('clipboardy')
 const lorem = require("./p.js") // Lorem ispum text
-const version = "1.2.4"
+const version = "1.3.0"
 
 var clpsm = function (plen, flags = []) {
 
@@ -30,22 +30,24 @@ var clpsm = function (plen, flags = []) {
 			lineEnd: "\n\n" // Carriage return for formatting. Store here in case I wanna remove
 		}
 
-		// Set source & console strings from flags
-		if (flags.length) {
-			if (flags.indexOf("s") > -1) {
+		const flagOut = {
+			s: () => {
 				out.lorem = lorem.content.short
 				out.len = "short "
-			}
-			if (flags.indexOf("l") > -1) {
+			},
+			l: () => {
 				out.lorem = lorem.content.long
 				out.len = "long "
-			}
-			if (flags.indexOf("p") > -1) {
+			},
+			p: () => {
 				out.tagged = "tagged "
 				out.pPre = "<p>"
-				out.pPost = "</p>"
+				out.pPost = "</p>"				
 			}
 		}
+
+		// Set source & console strings from flags
+		for (let f of flags) flagOut[f]()
 
 		// No args, just handle as 1
 		if (plen === 1) {
@@ -124,7 +126,7 @@ if (require.main === module) {
 		"$ clpsm              # Single paragraph" + "\n" +
 		"$ clpsm 3            # 3 paragraphs" + "\n" +
 		"$ clpsm 50 -s        # 50 short paragraphs" + "\n" +
-		"$ clpsm 5 -s -p      # 5 short, html tagged paragraphs" + "\n"
+		"$ clpsm 5 -pl       # 5 long, html tagged paragraphs" + "\n"
 	
 	// Check arguments
 	for (i; i < l; i++) {
@@ -143,17 +145,9 @@ if (require.main === module) {
 				plen = Number(ar)
 			}
 		}
-		// Short flag. Source short paragraphs
-		else if (ar == "-s") {
-			flags.push("s")
-		}
-		// Short flag. Source long paragraphs
-		else if (ar == "-l") {
-			flags.push("l")
-		}
-		// Parapraph tag flag. Surround paragraphs in html tags
-		else if (ar == "-p") {
-			flags.push("p")
+		else if (ar.indexOf("-") === 0 && ar.indexOf("--") < 0) {
+			let spl = ar.substring(1).split("")
+			flags = flags.concat(spl)
 		}
 		// Unrecognized command
 		else {
